@@ -1,0 +1,2 @@
+# PyQtFoo
+Foo Class
