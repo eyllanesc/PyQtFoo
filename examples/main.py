@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from PyQt5 import QtGui, QtCore, QtQuick, QtQml
 import PyCVQML
-from PyCVQML import CVAbstractFilter
 
 
 def max_rgb_filter(image):
@@ -26,12 +25,12 @@ def rgb_to_gray(image):
     return gray
 
 
-class MaxRGBFilter(CVAbstractFilter):
+class MaxRGBFilter(PyCVQML.CVAbstractFilter):
     def process_image(self, src):
         return max_rgb_filter(src)
 
 
-class GrayFilter(CVAbstractFilter):
+class GrayFilter(PyCVQML.CVAbstractFilter):
     def process_image(self, src):
         return rgb_to_gray(src)
 
